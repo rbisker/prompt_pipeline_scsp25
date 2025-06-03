@@ -1,0 +1,39 @@
+Just before sunrise we saw a quadcopter hovering 200m north of our OP near the burned-out railcars. It had blinking IR strobes and what looked like a downward-facing FLIR pod. It stayed stationary for about 90 seconds, then banked east and disappeared. We couldn’t confirm if it was one of ours or an enemy scout. No signal detected on our tracker—might be using passive relay tech. (Image: drone_spotted_05.jpg)
+
+Got my first hot meal in over two weeks thanks to the supply convoy making it through. Chicken curry MRE, heated properly for once. Morale went through the roof in the bunker. Even the LT smiled for like five seconds. Small wins matter.
+
+Last night, the SmartVigilant-22 CUAS turret on Checkpoint Delta activated without command input. It locked onto a thermal signature and fired a burst of three interceptors. Turns out it was a migrating bird flock. We're now down 3 interceptors and still have no override protocol for false targets. Control node flagged it as a glitch in the friend-or-foe profile library. (Image: cuas_misfire_delta.jpg)
+
+Mine are soaked and rotting after that river crossing. Anyone have dry socks to trade? Offering one unopened jalapeño cheese spread. Not even joking.
+
+This morning we found leaflets scattered in a 50-meter radius near our ammo dump. The enemy UAS—looked like a rotary-wing SkyPhantom Mini—dropped them from low altitude. Leaflets had weird broken English about surrendering for "guaranteed comforts." Our PsyOps guys are collecting them for analysis. (Image: enemy_leaflets_03.png)
+
+Took five minutes to just look up with NVGs last night. Sky was crystal clear. Could see several satellites tracking across. One of them flared—it might’ve been a Starlink bird or some other comms asset. Surreal, given the artillery in the background.
+
+Used the new GhostNet camo mesh on our Humvee and the decoy signature module. When the enemy recon drone (looked like a BlackHornet Nano) flew overhead, it circled once then diverted west. The decoy EM signature seems to have thrown it off. That’s two out of two tests successful so far. (Image: camo_test_success.jpg)
+
+We actually got a PlayStation 4 set up in the shelter using a jury-rigged power rig and the comms battery. Even got a round of Call of Duty going. CO joined in, fragged two of us, then left without saying a word. Absolute legend.
+
+On patrol near the orchard ruins, we spotted a hexacopter circling silently around 60m AGL. Our intel suspects it’s a Bastion-6 series with IR scanning. It stayed long enough to do a full 360 over our trench line, likely geo-tagging for mortar coordination. We reported it and moved to secondary cover. (Image: hexacopter_sighting_01.jpg)
+
+Weird noises last night from east of the perimeter. Almost like wolves howling. Too far for visual confirmation, but a few of us heard it through the trees. Don’t know if it’s wildlife or something else. Either way, we doubled watch rotations. (Image: tree_line_audio_suspected.jpg)
+
+We deployed the Sentinel-8 jammer for the first time. Effective range looks to be 400 meters line-of-sight. Knocked a quad drone out of the sky immediately, but also temporarily killed our own team comms. Definitely needs band filter tuning.
+
+Grilled Spam over open fire last night on a makeshift rack made from scrap antenna and ammo box metal. Alpha team brought a tiny bottle of hot sauce. Best meal we've had in a month. Even Bravo showed up for scraps. (Image: trench_grill_night.jpg)
+
+Enemy used a recon quad (likely a StormEye 4R) to drop a pair of dense smoke canisters just beyond our northern trench. No injuries but visibility dropped to zero for about 4 minutes. Covered their repositioning. We need better predictive radar coverage. (Image: smoke_drop_zone_2.jpg)
+
+There’s a trench rat that basically lives in our corner of the bunker. Doesn’t bother anyone, eats crumbs, scares off smaller bugs. We named him Sergeant Whiskers. He survived an airburst last week. Probably immortal.
+
+We’re getting hands-on with the Raybeam-R7 laser CUAS system tomorrow. It's supposed to disable small UAS within 500m using directed energy. Hoping it's more accurate than the old auto-turret. No one wants to accidentally fry a crow again. (Image: raybeam_r7_preview.png)
+
+Sunrise over Hill 9 this morning looked like a painting. Pink sky, fog over the valley. Felt human for five minutes until the recon alarm went off.
+
+Almost had a blue-on-blue situation yesterday. Our auto-ID system flagged a friendly Puma drone as hostile due to outdated recognition profiles. CUAS turret locked on but the operator caught it just in time. We’re pushing for urgent firmware updates.
+
+Got a care package from my niece—handwritten card, gummy bears, and like three feet of bubble wrap. Whole squad took turns popping it. She’s a tactical genius.
+
+At 0200 last night, the enemy launched a micro-drone swarm—looked like a cloud of gnats, maybe 30-50 units. Probably Dragonfly-Class recon models. They triggered our passive acoustic sensors but didn’t attack. One of them tagged the antenna array. Just data collection… this time. (Image: micro_drone_swarm_detected.jpg)
+
+If I eat one more oatmeal MRE I’m going to file a formal complaint with whoever thought “plain with raisins” was a good idea. I’d sell my NVGs for a pancake. Or even a tortilla.
