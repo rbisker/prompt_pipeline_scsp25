@@ -46,7 +46,7 @@ while True:
 
   if preview_task["status"] == "SUCCEEDED":
     print("Preview task finished.")
-    print("Preview taks JSON:\n", preview_task)
+    print("Preview task JSON:\n", preview_task)
     break
 
   print("Preview task status:", preview_task["status"], "| Progress:", preview_task["progress"], "| Retrying in 5 seconds...")
