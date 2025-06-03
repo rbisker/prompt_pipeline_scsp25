@@ -5,7 +5,7 @@ import time
 from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("MESHY_API_KEY")
-print("Loaded API key:", os.getenv("MESHY_API_KEY"))
+# print("Loaded API key:", os.getenv("MESHY_API_KEY"))
 headers = {"Authorization": f"Bearer {api_key}"}
 
 # --- Send prompt to text-to-3d endpoint ---
@@ -29,7 +29,7 @@ def meshy_txt_to_3d(prompt):
     preview_task_id = preview_response.json()["result"]
     print("Preview task created. Task ID:", preview_task_id)
 
-    # Poll preview task statsu until finished
+    # Poll preview task status until finished
     preview_task = None
 
     while True:
@@ -91,7 +91,6 @@ def meshy_img_to_3d(image):
         print("Task created. Task ID:", task_id)
 
         # Poll task status until finished
-
         while True:
             task_response = requests.get(
                 f"https://api.meshy.ai/openapi/v1/image-to-3d/{task_id}",
