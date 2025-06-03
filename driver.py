@@ -1,9 +1,12 @@
 import os
-os.environ["OPENAI_API_KEY"] = "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" 
-
+from dotenv import load_dotenv
 from posts import parse_posts_from_file
 from mesh_pipeline import *
 
+# Load environment variables from .env
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
 
 
 posts = parse_posts_from_file("forum_posts.txt")

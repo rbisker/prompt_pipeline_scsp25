@@ -1,5 +1,10 @@
 import os
-os.environ["OPENAI_API_KEY"] = "" # <-- Replace with your key
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
 
 # ✅ Test PyTorch
 try:
