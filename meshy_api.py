@@ -27,7 +27,7 @@ def meshy_txt_to_3d(prompt):
 
     preview_response.raise_for_status()
     preview_task_id = preview_response.json()["result"]
-    print("Preview task created. Task ID:", preview_task_id)
+    print("Text-to-3D preview task created. Task ID:", preview_task_id)
 
     # Poll preview task status until finished
     preview_task = None
@@ -42,10 +42,10 @@ def meshy_txt_to_3d(prompt):
         preview_task = preview_task_response.json()
 
         if preview_task["status"] == "SUCCEEDED":
-            print("Preview task completed.")
+            print("Text-to-3D preview task completed.")
             break
 
-        print("Preview task status:", preview_task["status"], "| Progress:", preview_task["progress"], "| Retrying in 5 seconds...")
+        print("Text-to-3D preview task status:", preview_task["status"], "| Progress:", preview_task["progress"], "| Retrying in 5 seconds...")
         time.sleep(5)
 
     # Download preview model in obj format
@@ -53,10 +53,12 @@ def meshy_txt_to_3d(prompt):
     preview_model_response = requests.get(preview_model_url)
     preview_model_response.raise_for_status()
 
-    with open("drone_from_txt.obj", "wb") as f:
+    obj_filename = "drone_from_txt.obj"
+
+    with open(obj_filename, "wb") as f:
         f.write(preview_model_response.content)
 
-    print("Preview model downloaded as drone_from_txt.obj")
+    print(f"Text-to-3D preview model downloaded as {obj_filename}")
 
 
 def image_to_data_uri(image_path):
@@ -88,7 +90,7 @@ def meshy_img_to_3d(image):
 
         response.raise_for_status()
         task_id = response.json()["result"]
-        print("Task created. Task ID:", task_id)
+        print("Image-to-3D task created. Task ID:", task_id)
 
         # Poll task status until finished
         while True:
@@ -101,20 +103,22 @@ def meshy_img_to_3d(image):
             task = task_response.json()
 
             if task["status"] == "SUCCEEDED":
-                print("Image to 3D task completed.")
+                print("Image-to-3D task completed.")
                 break
 
-            print("Task status:", task["status"], "| Progress:", task["progress"], "| Retrying in 5 seconds...")
+            print("Image-to-3D task status:", task["status"], "| Progress:", task["progress"], "| Retrying in 5 seconds...")
             time.sleep(5)
 
         # Download model in obj format
         model_url = task["model_urls"]["obj"]
         model_response = requests.get(model_url)
 
-        with open("drone_from_img.obj", "wb") as f:
+        obj_filename = "drone_from_img.obj"
+
+        with open(obj_filename, "wb") as f:
             f.write(model_response.content)
 
-        print("Model downloaded as drone_from_img.obj")
+        print(f"Image-to-3D model downloaded as {obj_filename}")
 
     
 if __name__ == "__main__":
