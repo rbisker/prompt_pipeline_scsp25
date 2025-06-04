@@ -1,6 +1,8 @@
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
+
+
 filter_prompt = PromptTemplate(
     input_variables=["post"],
     template="""

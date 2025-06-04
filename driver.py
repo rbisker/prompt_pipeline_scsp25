@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
-from posts import parse_posts_from_file
-from mesh_pipeline import *
-from meshy_api import *
+from webapp.posts import parse_posts_from_file
+from webapp.mesh_pipeline import *
+from webapp.meshy_api import *
 
 # Load environment variables from .env
 load_dotenv()

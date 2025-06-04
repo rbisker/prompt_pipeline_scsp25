@@ -5,7 +5,8 @@ import time
 from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("MESHY_API_KEY")
-# print("Loaded API key:", os.getenv("MESHY_API_KEY"))
+if not api_key:
+    raise ValueError("MESHY_API_KEY environment variable is not set")
 headers = {"Authorization": f"Bearer {api_key}"}
 
 # --- Send prompt to text-to-3d endpoint ---

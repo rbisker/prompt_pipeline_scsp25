@@ -1,3 +1,8 @@
+"""
+Main entry point for the webapp deployed on Render
+https://forum-prompt-generator.onrender.com
+"""
+
 from fastapi import FastAPI, UploadFile, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -10,12 +15,15 @@ from mesh_pipeline import filter_relevant_posts, generate_mesh_prompt
 import os
 import uuid
 
+from dotenv import load_dotenv
+load_dotenv()  # for local development
+
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse, status_code=200)
 async def form_get(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
@@ -29,6 +37,8 @@ async def form_post(request: Request, file: UploadFile):
         f.write(contents)
 
     posts = parse_posts_from_file(filename)
+    os.remove(filename) # clean up file 
+    # TODO: modify parse_posts_from_file to handle a string rather than a file 
     relevant_posts = filter_relevant_posts(posts)
     prompts = generate_mesh_prompt(relevant_posts)
 
