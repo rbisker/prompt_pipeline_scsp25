@@ -63,6 +63,7 @@ __pycache__/
 # ignored folders
 planning docs/
 models/
+uploads/
 
 #.env file
 .env
