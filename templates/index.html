@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meshy Forum Demo</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .forum-posts {
+            max-height: 300px;
+            overflow-y: auto;
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            margin-top: 1rem;
+            border-radius: 6px;
+        }
+        .forum-post {
+            border-bottom: 1px solid #eee;
+            padding: 0.5rem 0;
+        }
+        .forum-post:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Forum Posts to Meshy Prompts Demo</h1>
+        <form method="post" enctype="multipart/form-data" style="display: flex; align-items: center; gap: 1rem;">
+            <div style="display: flex; flex-direction: column;">
+                <label for="file">Upload forum posts text file:</label>
+                <input type="file" id="file" name="file" accept=".txt" required>
+            </div>
+            <button type="submit">Process</button>
+            <a href="/reset"><button type="button">🔄 Reset</button></a>
+        </form>
+
+
+        {% if all_posts %}
+            <h2>"Original" Posts</h2>
+            <div class="forum-posts">
+                {% for post in all_posts %}
+                    <div class="forum-post">
+                        <strong>Post {{ loop.index }}</strong>
+                        <p>{{ post.text }}</p>
+                        {% if post.image %}
+                            <small>🖼 Image: {{ post.image }}</small>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if relevant_posts %}
+            <h2>Relevant Posts</h2>
+            {% for post in relevant_posts %}
+                <div class="post">
+                    <p>{{ post.text }}</p>
+                    {% if post.image %}
+                        <small>🖼 Image: {{ post.image }}</small>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% if prompts %}
+            <h2>Meshy Prompts</h2>
+            {% for prompt in prompts %}
+                <div class="prompt">
+                    <p>{{ prompt.prompt }}</p>
+                    {% if prompt.image %}
+                        <small>🖼 Image: {{ prompt.image }}</small>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
+

@@ -32,7 +32,7 @@ for prompt in meshy_prompts:
             print(f"✅ Image found: {prompt['image']} — sending to Meshy image-to-3D...")
             meshy_img_to_3d(prompt["image"])
         else:
-            print(f"⚠️ Image file not found: {prompt['image']} — falling back to text-to-3D...")
+            print(f"⚠️ Image file not found: {prompt['image']} — falling back to Meshy text-to-3D...")
             meshy_txt_to_3d(prompt["prompt"])
     else:
         print("ℹ️ No image present — sending to Meshy text-to-3D...")

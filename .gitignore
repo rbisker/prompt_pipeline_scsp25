@@ -60,8 +60,9 @@ __pycache__/
 *.obj
 *.glb
 
-# Scratch Folders
+# ignored folders
 planning docs/
+models/
 
 #.env file
 .env
